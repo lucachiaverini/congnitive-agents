@@ -1,0 +1,96 @@
+# config-ai.yaml
+
+general_parameters:
+  avg_clicks_to_find_doc: 2                  # Meno click grazie alla ricerca automatica
+  avg_nav_time_per_click_sec: 1              # Navigazione più veloce
+  avg_doc_open_time_sec: 2                   # Apertura documenti più rapida
+  avg_read_speed_words_per_sec: 10           # Lettura/riassunto molto più veloce
+  avg_cognitive_processing_sec: 10           # Elaborazione mentale ridotta (AI supporta)
+  avg_writing_speed_words_per_sec: 5         # Generazione risposta più rapida
+  doc_type_count: 5
+  min_documents_per_operation: 1             # Meno documenti da consultare
+  max_documents_per_operation: 5
+
+ai_agent:
+  context_knowledge_factor: 1.0              # Massima conoscenza del contesto
+  error_rate: 0.05                           # Bassa probabilità di errore
+  hallucination_rate: 0.03                   # Probabilità di allucinazione
+  cognitive_load_tolerance: 10.0             # Molto alta grazie al supporto AI
+  short_term_memory_capacity: 30000          # Maggiore capacità grazie al riassunto
+  confidence: 0.95                           # Alta fiducia nelle risposte
+  stress_tolerance: 0.95                     # Bassa fatica, AI aiuta a gestire lo stress
+  retrieval_latency_sec: 1.0                 # Latenza media per recupero info
+  generation_latency_sec: 0.8                # Latenza media per generazione risposta
+
+document_sources:
+  local_pc:
+    probability: 0.4
+    pages_range: [1, 30]
+  sites_web:
+    probability: 0.3
+    pages_range: [5, 50]
+  teams:
+    probability: 0.2
+    pages_range: [10, 70]
+  email:
+    probability: 0.1
+    pages_range: [1, 20]
+
+wait_times_sec:
+  teams:
+    min: 0                            # Tempo minimo attesa risposta Teams (sec)
+    max: 0                          # Tempo massimo attesa risposta Teams (sec)
+  email:
+    min: 0                           # Tempo minimo attesa email (sec)
+    max: 0                         # Tempo massimo attesa email (sec)
+
+profiles:
+  junior:
+    hourly_rate: 15
+    context_knowledge_factor: 0.3
+    error_rate: 0.4
+    cognitive_load_tolerance: 1.5
+    short_term_memory_capacity: 4000
+    confidence: 0.25
+    stress_tolerance: 0.4
+
+  mid:
+    hourly_rate: 25
+    context_knowledge_factor: 0.6
+    error_rate: 0.3
+    cognitive_load_tolerance: 3.5
+    short_term_memory_capacity: 10000
+    confidence: 0.6
+    stress_tolerance: 0.65
+
+  senior:
+    hourly_rate: 45
+    context_knowledge_factor: 1
+    error_rate: 0.03
+    cognitive_load_tolerance: 7.0
+    short_term_memory_capacity: 20000
+    confidence: 1
+    stress_tolerance: 1
+
+task:
+  complexity_distribution:
+    low: 60
+    medium: 30
+    high: 10  
+    
+complexity_ranges:
+  low: [1, 3]
+  medium: [4, 7]
+  high: [8, 10]
+
+profile_assignment:
+  junior_max: 3
+  mid_min: 4
+  mid_max: 7
+  senior_min: 8
+
+organizations:
+  profiles:
+    junior: 50
+    mid: 40
+    senior: 10

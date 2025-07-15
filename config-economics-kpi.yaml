@@ -1,0 +1,19 @@
+# config.yaml
+
+# Parametri generali per KPI economici
+economics:
+  investment: 100000           # Investimento iniziale (€)
+  equity: 150000               # Capitale proprio (€)
+  discount_rate: 0.07          # Tasso di sconto per NPV (7%)
+  ticket_revenue:              # Ricavo medio per ticket in base alla complessità (€)
+    low:
+      revenue: 110
+      range: [1, 3]
+    medium: 
+      revenue: 250
+      range: [4, 7]
+    high: 
+      revenue: 450 
+      range: [8, 10]
+  periods: 5                  # Numero di periodi (es. anni) per NPV
+  taxes: 0.28                  # Aliquota fiscale (28%)
